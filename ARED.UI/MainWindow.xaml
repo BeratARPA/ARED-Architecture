@@ -1,0 +1,18 @@
+﻿<Window x:Class="ARED.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARED.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" Background="LightSlateGray" FontSize="15" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+            <TextBlock Text="Password:" Foreground="White" FontWeight="Bold"/>
+            <TextBox x:Name="TextBoxPassword"/>
+            <Button Content="Login" Click="ButtonLogin_Click"/>
+            <TextBlock Text="Password: 1234" Foreground="White" Margin="0 10 0 0"/>
+        </StackPanel>
+        <Frame x:Name="FrameContent" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>
