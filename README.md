@@ -1,99 +1,99 @@
 # ARED Architecture (Action, Rule, Event-Driven Architecture)
 
-ARED Architecture, uygulamalarınızı olay tabanlı, kural tabanlı ve eylem odaklı bir şekilde kişiselleştirmenizi sağlayan yenilikçi bir mimaridir. Kullanıcıların belirli olaylar için özelleştirilmiş eylemler ve kurallar tanımlayarak uygulamanın davranışını dinamik olarak yönetmelerine olanak tanır.
+ARED Architecture is an innovative framework that enables you to personalize your applications in an event-driven, rule-based, and action-focused manner. It allows users to dynamically manage the behavior of the application by defining customized actions and rules for specific events.
 
-## İçindekiler
+## Table of Contents
 
-- [Özellikler](#özellikler)
-- [Mimari](#mimari)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Senaryolar](#senaryolar)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
-- [İletişim](#iletişim)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scenarios](#scenarios)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Özellikler
+## Features
 
-- **Dinamik Kural Tanımlama:** Kullanıcılar, uygulamanın belirli olaylara ve koşullara göre nasıl tepki vereceğini tanımlayan kurallar oluşturabilirler.
-- **Kullanıcı Eylemleri:** Eylem tabanlı yapı sayesinde, kullanıcılar çeşitli eylemleri (örneğin, veri güncellemeleri, bildirimler, kullanıcı arayüzü değişiklikleri) özelleştirebilirler.
-- **Olay Tabanlı Kişiselleştirme:** Kullanıcılar, uygulama içindeki belirli olaylara göre kişiselleştirilmiş davranışları belirleyebilirler.
-- **Gerçek Zamanlı Güncellemeler:** Yapılan değişiklikler anında uygulama üzerinde etkili olur ve sonuçlar hemen gözlemlenebilir.
+- **Dynamic Rule Definition:** Users can create rules that define how the application responds to specific events and conditions.
+- **User Actions:** With the action-based structure, users can customize various actions (e.g., data updates, notifications, UI changes).
+- **Event-Driven Customization:** Users can define personalized behaviors based on specific events within the application.
+- **Real-Time Updates:** Changes take effect immediately on the application, and results can be observed instantly.
 
-## Mimari
+## Architecture
 
-ARED Architecture, üç temel bileşenden oluşur:
+ARED Architecture consists of three core components:
 
-1. **Eylemler (Actions):**
-   - Uygulamanın belirli olaylar doğrultusunda gerçekleştireceği işlemler.
-   - Örnek: Veri güncellemesi, e-posta gönderimi, kullanıcı arayüzü güncellemesi.
+1. **Actions:**
+   - The tasks that the application performs in response to specific events.
+   - Example: Data update, sending an email, updating the user interface.
 
-2. **Kurallar (Rules):**
-   - Belirli koşullar altında hangi eylemlerin gerçekleştirileceğini tanımlayan mantıksal yapılar.
-   - Örnek: “Eğer kullanıcı bir ürünü sepete eklerse, sepet toplamını güncelle.”
+2. **Rules:**
+   - Logical structures that define which actions will be performed under specific conditions.
+   - Example: “If the user adds a product to the cart, update the cart total.”
 
-3. **Olaylar (Events):**
-   - Uygulama içinde gerçekleşen belirli durumlar veya tetikleyiciler.
-   - Örnek: Kullanıcı giriş yaptı, yeni bir kayıt oluşturuldu, veri güncellendi.
+3. **Events:**
+   - Specific triggers or situations that occur within the application.
+   - Example: User login, a new record is created, data is updated.
 
-### Akış Şeması
+### Workflow Diagram
 
-1. **Olay Tetikleyici:** Uygulamada bir olay meydana gelir.
-2. **Kural Değerlendirmesi:** Olay meydana geldiğinde, ilgili kurallar değerlendirilir.
-3. **Eylem Gerçekleştirme:** Kurallar doğrultusunda gerekli eylemler gerçekleştirilir.
-4. **Sonuç:** Eylemler uygulama içinde anında görünür.
+1. **Event Trigger:** An event occurs in the application.
+2. **Rule Evaluation:** The relevant rules are evaluated when the event occurs.
+3. **Action Execution:** The necessary actions are performed according to the rules.
+4. **Result:** The actions are immediately reflected in the application.
 
-## Kullanım
+## Usage
 
-ARED Architecture'ı kullanmak için aşağıdaki adımları izleyin:
+To use ARED Architecture, follow these steps:
 
-### Kural Oluşturma
+### Creating Rules
 
-- **Yeni Bir Kural Tanımlayın:** Kullanıcıların belirli olaylara tepki olarak ne yapacaklarını belirleyen yeni kurallar oluşturun.
-  - Örnek: "Eğer kullanıcı bir ürün satın alırsa, kullanıcıya teşekkür e-postası gönder."
+- **Define a New Rule:** Create new rules that determine how the application will respond to specific events.
+  - Example: "If a user purchases a product, send a thank-you email to the user."
 
-- **Kuralı Test Edin:** Oluşturduğunuz kuralları test edin ve olayları tetikleyerek eylemlerin doğru şekilde gerçekleştiğinden emin olun.
+- **Test the Rule:** Test the rules you create by triggering events and ensuring the actions occur correctly.
 
-### Eylem Tanımlama
+### Defining Actions
 
-- **Eylem Ekleyin:** Uygulamanın gerçekleştireceği eylemleri tanımlayın.
-  - Örnek: "Veritabanına veri ekleme", "Kullanıcı arayüzünü güncelleme."
+- **Add an Action:** Define the actions that the application will perform.
+  - Example: "Add data to the database", "Update the user interface."
 
-- **Eylemi İlişkilendirin:** Tanımladığınız eylemleri, ilgili kurallar ve olaylarla ilişkilendirin.
+- **Associate the Action:** Link the actions you define with the relevant rules and events.
 
-### Olay Tetikleyicileri
+### Event Triggers
 
-- **Olay Tanımlayın:** Uygulamanın içindeki olayları tanımlayın.
-  - Örnek: "Kullanıcı giriş yaptı", "Yeni bir kayıt oluşturuldu."
+- **Define Events:** Define the events within the application.
+  - Example: "User logged in", "A new record was created."
 
-- **Olayları Test Edin:** Olayları tetikleyin ve doğru eylemlerin gerçekleştirilip gerçekleştirilmediğini kontrol edin.
+- **Test Events:** Trigger events and check if the correct actions are executed.
 
-## Senaryolar
+## Scenarios
 
-- **Senaryo 1: Kullanıcı Kaydı**
-  - **Olay:** Kullanıcı yeni bir hesap oluşturdu.
-  - **Kural:** Yeni kullanıcı kaydı oluşturulduğunda, kullanıcıya hoş geldin e-postası gönder.
-  - **Eylem:** Kullanıcı e-posta adresine hoş geldin e-postası gönder.
+- **Scenario 1: User Registration**
+  - **Event:** A user creates a new account.
+  - **Rule:** When a new user is registered, send a welcome email to the user.
+  - **Action:** Send a welcome email to the user's email address.
 
-- **Senaryo 2: Ürün Sepeti**
-  - **Olay:** Kullanıcı sepetine bir ürün ekledi.
-  - **Kural:** Sepete yeni bir ürün eklendiğinde, sepet toplamını güncelle.
-  - **Eylem:** Sepet toplamını güncelle ve kullanıcıya güncel sepet bilgilerini göster.
+- **Scenario 2: Shopping Cart**
+  - **Event:** A user adds a product to the cart.
+  - **Rule:** When a new product is added to the cart, update the cart total.
+  - **Action:** Update the cart total and display the updated cart information to the user.
 
-## Katkıda Bulunma
+## Contributing
 
-Bu projeye katkıda bulunmak isterseniz, lütfen aşağıdaki adımları izleyin:
+If you want to contribute to this project, please follow these steps:
 
-1. **Depoyu Forklayın:** Bu bağlantıyı kullanarak projeyi fork edin.
-2. **Yeni Bir Dal Oluşturun:** `git checkout -b yeni-ozellik`
-3. **Değişiklikleri Yapın ve Commit Edin:** `git commit -m 'Yeni özellik ekle'`
-4. **Dalınızı Gönderin:** `git push origin yeni-ozellik`
-5. **Pull Request Açın:** GitHub üzerinden yeni bir pull request açın ve değişikliklerinizi incelemeye sunun.
+1. **Fork the Repository:** Fork the project using this link.
+2. **Create a New Branch:** `git checkout -b new-feature`
+3. **Make Changes and Commit:** `git commit -m 'Add new feature'`
+4. **Push Your Branch:** `git push origin new-feature`
+5. **Open a Pull Request:** Open a new pull request on GitHub and submit your changes for review.
 
-## Lisans
+## License
 
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakabilirsiniz.
+This project is licensed under the MIT License. For more information, please refer to the LICENSE file.
 
-## İletişim
+## Contact
 
-Herhangi bir sorunuz, geri bildiriminiz veya katkı öneriniz varsa, lütfen [beratarpa@hotmail.com](mailto:beratarpa@hotmail.com) adresinden benimle iletişime geçin.
+If you have any questions, feedback, or contribution suggestions, please feel free to contact me at [beratarpa@hotmail.com](mailto:beratarpa@hotmail.com).
